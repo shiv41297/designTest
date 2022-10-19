@@ -8,16 +8,16 @@ import BrandPartner from "./components/brandPartner";
 import Activities from "./components/activities";
 import AboutUs from "./components/abboutus";
 import Blog from "./components/ourblog"
-
 import Subscribe from "./components/subscribe/index";
 import Stats from './components/Stats/stats'
 import NewLauch from './components/NewLaunch/newlaunch'
+import Footer from "./components/footer/index"
 const styles = makeStyles((theme: Theme) =>
   createStyles({
     mainComponent: {
       fontFamily: "Manrope !important",
       paddingTop: "80px",
-      paddingBottom: "60px",
+      // paddingBottom: "60px",
     },
   })
 );
@@ -36,6 +36,7 @@ function App() {
       <NewLauch/>
       <Blog/>
       <Subscribe />
+      <Footer />
     </div>
     </ThemeProvider>
   );

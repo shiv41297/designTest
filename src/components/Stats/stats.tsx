@@ -138,7 +138,7 @@ const Stats = () => {
               >
                 <Typography
                   className={
-                    index == hoverClass
+                    index === hoverClass
                       ? `${classes.hoverClass}`
                       : `${classes.fifty}`
                   }
