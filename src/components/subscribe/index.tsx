@@ -28,6 +28,9 @@ const styles = makeStyles((theme: Theme) =>
       fontSize: "24px",
       fontWeight: "700",
       padding: "10px",
+      '&:hover':{
+        cursor: "pointer",
+      }
     },
   })
 );
