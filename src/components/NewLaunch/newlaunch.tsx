@@ -143,7 +143,7 @@ const useStyles = makeStyles(() =>
       flexDirection: "column",
       justifyContent: "space-between",
       marginTop: "80px",
-      width: "546px",
+      width: "30%",
       
     },
     imgStyle: {
