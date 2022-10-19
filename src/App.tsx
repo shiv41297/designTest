@@ -5,6 +5,7 @@ import Banner from "./components/banner";
 import BrandPartner from "./components/brandPartner";
 import Activities from "./components/activities";
 import AboutUs from "./components/abboutus";
+import Subscribe from "./components/subscribe/index";
 const styles = makeStyles((theme: Theme) =>
   createStyles({
     mainComponent: {
@@ -21,8 +22,9 @@ function App() {
       <Header />
       <Banner />
       <BrandPartner />
-      <Activities/>
-      <AboutUs/>
+      <Activities />
+      <AboutUs />
+      <Subscribe />
     </div>
   );
 }
