@@ -11,5 +11,8 @@ const LocalIcons = {
     ACTIVITY3:"../assets/images/activity3.jpg",
     ACTIVITY4:"../assets/images/activity4.jpg",
     ABOUT_US:"../assets/images/aboutus.jpg",
+    OURBLOG1:"../assets/images/health.jpg",
+    OURBLOG2:"../assets/images/workout.jpg",
+    OURBLOG3:"../assets/images/rope.jpg",
 }
 export default LocalIcons
