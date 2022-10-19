@@ -20,5 +20,6 @@ const LocalIcons = {
     OURBLOG1:"../assets/images/blog1.jpg",
     OURBLOG2:"../assets/images/blog2.jpg",
     OURBLOG3:"../assets/images/blog3.jpg",
+    BANNERVIDEO:"../assets/images/banner.mp4"
 }
 export default LocalIcons

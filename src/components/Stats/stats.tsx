@@ -38,6 +38,7 @@ const useStyles = makeStyles(() =>
       alignContent: "center",
       alignItems: "center",
       "&:hover": {
+        color: "#2E90EA",
         width: "283px",
         height: "283px",
         backgroundColor: "white",
@@ -110,9 +111,9 @@ const Stats = () => {
     <>
       <ThemeProvider theme={theme}>
         <div className={classes.mainDiv}>
-          {arr.map((item) => {
+          {arr.map((item, index) => {
             return (
-              <div className={classes.box} >
+              <div className={classes.box} key = {index}>
                 <Typography className={classes.fifty}>{item.number}</Typography>
                 <Typography className={classes.subHeading}>
                   {item.things}
