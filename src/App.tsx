@@ -34,6 +34,7 @@ function App() {
       <AboutUs />
       <Stats/>
       <NewLauch/>
+      <Blog/>
       <Subscribe />
     </div>
     </ThemeProvider>
