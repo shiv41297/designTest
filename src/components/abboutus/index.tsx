@@ -2,7 +2,7 @@ import React from "react";
 import { createStyles, makeStyles } from "@mui/styles";
 import { Theme, Typography } from "@mui/material";
 import Title from "../title/index";
-import LocalIcons from "../../utils/image"
+import LocalIcons from "../../utils/image";
 const styles = makeStyles((theme: Theme) =>
   createStyles({
     aboutus: {
@@ -24,7 +24,15 @@ const styles = makeStyles((theme: Theme) =>
       fontSize: "24px !important",
       fontWeight: "400 !important",
     },
-    rightSection: { width: "48%" },
+    rightSection: {
+      width: "48%",
+      height: "500px",
+      margin: "0",
+      "& img": {
+        width: "100%",
+        height: "100%",
+      },
+    },
   })
 );
 function AboutUs() {

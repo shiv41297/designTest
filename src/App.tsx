@@ -9,6 +9,7 @@ import Activities from "./components/activities";
 import AboutUs from "./components/abboutus";
 import Blog from "./components/ourblog"
 
+import Subscribe from "./components/subscribe/index";
 const styles = makeStyles((theme: Theme) =>
   createStyles({
     mainComponent: {
@@ -31,6 +32,8 @@ function App() {
       <AboutUs/>
       <Blog />
       
+      
+      <Subscribe />
     </div>
     </ThemeProvider>
   );
