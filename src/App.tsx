@@ -6,6 +6,8 @@ import BrandPartner from "./components/brandPartner";
 import Activities from "./components/activities";
 import AboutUs from "./components/abboutus";
 import Subscribe from "./components/subscribe/index";
+import Stats from './components/Stats/stats'
+import NewLauch from './components/NewLaunch/newlaunch'
 const styles = makeStyles((theme: Theme) =>
   createStyles({
     mainComponent: {
@@ -24,6 +26,8 @@ function App() {
       <BrandPartner />
       <Activities />
       <AboutUs />
+      <Stats/>
+      <NewLauch/>
       <Subscribe />
     </div>
   );
