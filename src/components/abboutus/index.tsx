@@ -8,7 +8,7 @@ const styles = makeStyles((theme: Theme) =>
     aboutus: {
       fontFamily: "Manrope !important",
       paddingTop: "80px",
-      paddingBottom: "60px",
+      // paddingBottom: "60px",
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",

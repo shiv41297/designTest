@@ -67,17 +67,6 @@ const useStyles = makeStyles(() =>
         letterSpacing: "5px",
         textAlign: "center",
         marginTop: "70px",
-        // "&:hover": {
-        //   color: "#2E90EA",
-        //   fontFamily: "Manrope",
-        //   fontStyle: "normal",
-        //   fontWeight: "700",
-        //   fontSize: "64px",
-        //   lineHeight: "89.6px",
-        //   letterSpacing: "5px",
-        //   textAlign: "center",
-        //   marginTop: "70px",
-        // },
       },
     },
     hoverClass:{
@@ -91,6 +80,7 @@ const useStyles = makeStyles(() =>
       letterSpacing: "5px",
       textAlign: "center",
       marginTop: "70px",
+      cursor:"pointer"
       },
     },
     subHeading: {

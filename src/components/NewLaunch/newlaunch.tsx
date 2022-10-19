@@ -83,7 +83,7 @@ const useStyles = makeStyles(() =>
     underLine: {
       backgroundColor: "#2E90EA",
       width: "144px",
-      height: "8px",
+      height: "5px",
       //   marginBottom:'80px',
       marginLeft: "4px",
       [theme.breakpoints.down("sm")]: {
@@ -100,6 +100,7 @@ const useStyles = makeStyles(() =>
         borderRadius: "34px",
         color: "black",
         marginTop: "20px",
+        textTransform:'capitalize',
         [theme.breakpoints.down("sm")]: {
           width: "70px",
           height: "31px",
@@ -115,7 +116,7 @@ const useStyles = makeStyles(() =>
       display: "flex",
       flexWrap: "wrap",
       justifyContent: "space-between",
-      width: "90%",
+      width: "94%",
       margin: "0 auto",
       flexDirection: "row",
       marginBottom:'120px',
@@ -143,11 +144,11 @@ const useStyles = makeStyles(() =>
       flexDirection: "column",
       justifyContent: "space-between",
       marginTop: "80px",
-      width: "30%",
+      width: "30.5%",
       
     },
     imgStyle: {
-      height: "495px",
+      height: "599px",
       width: "100%",
       [theme.breakpoints.down("sm")]: {
         height: "445px",
@@ -203,9 +204,9 @@ const useStyles = makeStyles(() =>
       display: "flex",
       flexDirection: "row",
        justifyContent: "space-between",
-       width:'90%',
+       width:'86%',
       marginTop: "18px",
-      marginLeft:"25px",
+      marginLeft:"36px",
       [theme.breakpoints.down("sm")]: {
         display: "flex",
         flexDirection: "row",
