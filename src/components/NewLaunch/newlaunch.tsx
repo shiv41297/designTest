@@ -50,9 +50,7 @@ const arr = [
   },
 ];
 
-const theme = createTheme({
-    
-});
+const theme = createTheme({});
 const useStyles = makeStyles(() =>
   createStyles({
     mainDiv: {
@@ -119,7 +117,7 @@ const useStyles = makeStyles(() =>
       width: "94%",
       margin: "0 auto",
       flexDirection: "row",
-      marginBottom:'120px',
+      marginBottom: "120px",
       [theme.breakpoints.down("md")]: {
         display: "flex",
         flexWrap: "wrap",
@@ -162,7 +160,7 @@ const useStyles = makeStyles(() =>
         fontFamily: "Manrope !important",
         fontStyle: "normal",
         fontWeight: "700",
-        marginBottom:'10px',
+        marginBottom: "10px",
         [theme.breakpoints.down("sm")]: {
           fontSize: "21px",
           lineHeight: "38.5px",
@@ -225,7 +223,7 @@ const Newlaunch = () => {
       <ThemeProvider theme={theme}>
         <div className={classes.mainDiv}>
           <div>
-            <Typography className={classes.headingMain} >
+            <Typography className={classes.headingMain}>
               Nike New Launches !
             </Typography>
             <div className={classes.underLine}></div>
@@ -233,9 +231,9 @@ const Newlaunch = () => {
           <Button className={classes.btnView}>View All</Button>
         </div>
         <div className={classes.imgAlign}>
-          {arr.map((item) => {
+          {arr.map((item, index) => {
             return (
-              <div className={classes.mainDivCard}>
+              <div className={classes.mainDivCard} key={index}>
                 <img
                   className={classes.imgStyle}
                   src={item.image}
@@ -252,7 +250,7 @@ const Newlaunch = () => {
                     </Typography>
                   </div>
                   <Typography className={classes.priceHeading}>
-                    <span style={{ fontSize: "15px" }}>{item.symbol}  </span>
+                    <span style={{ fontSize: "15px" }}>{item.symbol} </span>
                     {item.price}
                   </Typography>
                 </div>

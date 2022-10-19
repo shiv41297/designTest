@@ -20,8 +20,8 @@ const useStyles = makeStyles(() =>
       marginTop: "100px",
       width: "90%",
       margin: "0 auto",
-    // marginLeft: "95px",
-    marginBottom:'162px',
+      // marginLeft: "95px",
+      marginBottom: "162px",
       [theme.breakpoints.down("sm")]: {
         display: "flex",
         justifyContent: "center",
@@ -38,6 +38,7 @@ const useStyles = makeStyles(() =>
       alignContent: "center",
       alignItems: "center",
       "&:hover": {
+        color: "#2E90EA",
         width: "283px",
         height: "283px",
         backgroundColor: "white",
@@ -45,7 +46,6 @@ const useStyles = makeStyles(() =>
         alignContent: "center",
         alignItems: "center",
         boxShadow: "rgba(0, 0, 0, 0.25) 0px 25px 50px -12px",
-        
       },
       [theme.breakpoints.down("sm")]: {
         width: "283px",
@@ -104,29 +104,41 @@ const useStyles = makeStyles(() =>
         display: "none",
       },
     },
-    
   })
 );
 
 const Stats = () => {
-
-  const [hoverClass , setHoverClass]=useState(-1);
-const onHoverEffect =(index:any)=>{
-setHoverClass(index)
-}
+  const [hoverClass, setHoverClass] = useState(-1);
+  const onHoverEffect = (index: any) => {
+    setHoverClass(index);
+  };
   const classes = useStyles();
   return (
     <>
       <ThemeProvider theme={theme}>
         <div className={classes.mainDiv}>
-          {arr.map((item:any,index:any) => {
+          {arr.map((item: any, index: any) => {
             return (
-              <div className={classes.box} onMouseOver={()=>onHoverEffect(index)} onMouseLeave={()=>{setHoverClass(-1)}} >
-                <Typography className={index == hoverClass ? `${classes.hoverClass}`:`${classes.fifty}`}>{item.number}</Typography>
+              <div key = {index}
+                className={classes.box}
+                onMouseOver={() => onHoverEffect(index)}
+                onMouseLeave={() => {
+                  setHoverClass(-1);
+                }}
+              >
+                <Typography
+                  className={
+                    index === hoverClass
+                      ? `${classes.hoverClass}`
+                      : `${classes.fifty}`
+                  }
+                >
+                  {item.number}
+                </Typography>
                 <Typography className={classes.subHeading}>
                   {item.things}
                 </Typography>
-                </div>
+              </div>
             );
           })}
         </div>

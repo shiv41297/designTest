@@ -9,8 +9,9 @@ const styles = makeStyles((theme: Theme) =>
       height: "500px",
       width: "100%",
       margin: "0px",
+      objectFit: "fill",
       position: "relative",
-      "& img": {
+      "& source": {
         width: "100% !important",
         height: "100% !important",
         objectFit: "cover !important",
@@ -18,7 +19,7 @@ const styles = makeStyles((theme: Theme) =>
     },
     bannerContent: {
       position: "absolute",
-      top: "44%",
+      top: "50%",
       left: "50%",
       transform: "translate(-50%, -50%)",
       width: "100%",
@@ -63,8 +64,10 @@ const styles = makeStyles((theme: Theme) =>
 function Banner() {
   const classes = styles();
   return (
-    <figure className={classes.banner}>
-      <img src={LocalIcons.BANNER} alt="banner" />
+    <React.Fragment>
+      <video className={classes.banner} loop muted autoPlay>
+        <source src={LocalIcons.BANNERVIDEO} type="video/mp4" />
+      </video>
       <div className={classes.bannerContent}>
         <Typography className={classes.title} variant="h2" component={"h2"}>
           Dare to be great.
@@ -86,7 +89,7 @@ function Banner() {
           </button>
         </div>
       </div>
-    </figure>
+    </React.Fragment>
   );
 }
 
