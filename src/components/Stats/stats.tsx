@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles, createStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
@@ -45,6 +45,7 @@ const useStyles = makeStyles(() =>
         alignContent: "center",
         alignItems: "center",
         boxShadow: "rgba(0, 0, 0, 0.25) 0px 25px 50px -12px",
+        
       },
       [theme.breakpoints.down("sm")]: {
         width: "283px",
@@ -66,17 +67,30 @@ const useStyles = makeStyles(() =>
         letterSpacing: "5px",
         textAlign: "center",
         marginTop: "70px",
-        "&:hover": {
-          color: "#2E90EA",
-          fontFamily: "Manrope",
-          fontStyle: "normal",
-          fontWeight: "700",
-          fontSize: "64px",
-          lineHeight: "89.6px",
-          letterSpacing: "5px",
-          textAlign: "center",
-          marginTop: "70px",
-        },
+        // "&:hover": {
+        //   color: "#2E90EA",
+        //   fontFamily: "Manrope",
+        //   fontStyle: "normal",
+        //   fontWeight: "700",
+        //   fontSize: "64px",
+        //   lineHeight: "89.6px",
+        //   letterSpacing: "5px",
+        //   textAlign: "center",
+        //   marginTop: "70px",
+        // },
+      },
+    },
+    hoverClass:{
+      "&.css-ahj2mt-MuiTypography-root":{
+      color: "#2E90EA",
+      fontFamily: "Manrope",
+      fontStyle: "normal",
+      fontWeight: "700",
+      fontSize: "64px",
+      lineHeight: "89.6px",
+      letterSpacing: "5px",
+      textAlign: "center",
+      marginTop: "70px",
       },
     },
     subHeading: {
@@ -105,15 +119,20 @@ const useStyles = makeStyles(() =>
 );
 
 const Stats = () => {
+
+  const [hoverClass , setHoverClass]=useState(-1);
+const onHoverEffect =(index:any)=>{
+setHoverClass(index)
+}
   const classes = useStyles();
   return (
     <>
       <ThemeProvider theme={theme}>
         <div className={classes.mainDiv}>
-          {arr.map((item) => {
+          {arr.map((item:any,index:any) => {
             return (
-              <div className={classes.box} >
-                <Typography className={classes.fifty}>{item.number}</Typography>
+              <div className={classes.box} onMouseOver={()=>onHoverEffect(index)} onMouseLeave={()=>{setHoverClass(-1)}} >
+                <Typography className={index == hoverClass ? `${classes.hoverClass}`:`${classes.fifty}`}>{item.number}</Typography>
                 <Typography className={classes.subHeading}>
                   {item.things}
                 </Typography>
