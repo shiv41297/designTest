@@ -158,7 +158,7 @@ const useStyles = makeStyles(() =>
       "&.css-ahj2mt-MuiTypography-root": {
         fontSize: "28px",
         lineHeight: "38.5px",
-        fontFamily: "Manrope",
+        fontFamily: "Manrope !important",
         fontStyle: "normal",
         fontWeight: "700",
         marginBottom:'10px',
@@ -175,7 +175,7 @@ const useStyles = makeStyles(() =>
       "&.css-ahj2mt-MuiTypography-root": {
         fontSize: "16px",
         lineHeight: "21.86px",
-        fontFamily: "Manrope",
+        fontFamily: "Manrope !important",
         fontStyle: "normal",
         fontWeight: "400",
         color: "#5F5F5F",
@@ -185,7 +185,7 @@ const useStyles = makeStyles(() =>
       "&.css-ahj2mt-MuiTypography-root": {
         fontSize: "25px",
         lineHeight: "38.25px",
-        fontFamily: "Manrope",
+        fontFamily: "Manrope !important",
         fontStyle: "normal",
         fontWeight: "lighter",
         color: "#000000",
@@ -205,6 +205,7 @@ const useStyles = makeStyles(() =>
        justifyContent: "space-between",
        width:'90%',
       marginTop: "18px",
+      marginLeft:"25px",
       [theme.breakpoints.down("sm")]: {
         display: "flex",
         flexDirection: "row",
@@ -216,7 +217,7 @@ const useStyles = makeStyles(() =>
   })
 );
 
-const Stats = () => {
+const Newlaunch = () => {
   const classes = useStyles();
   return (
     <>
@@ -263,4 +264,4 @@ const Stats = () => {
   );
 };
 
-export default Stats;
+export default Newlaunch;
