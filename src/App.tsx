@@ -1,10 +1,14 @@
-import { createStyles, makeStyles } from "@mui/styles";
+import { createStyles, makeStyles,ThemeProvider } from "@mui/styles";
+
 import { Theme } from "@mui/material";
+import { createTheme } from '@mui/system';
 import Header from "./components/header";
 import Banner from "./components/banner";
 import BrandPartner from "./components/brandPartner";
 import Activities from "./components/activities";
 import AboutUs from "./components/abboutus";
+import Blog from "./components/ourblog"
+
 import Subscribe from "./components/subscribe/index";
 import Stats from './components/Stats/stats'
 import NewLauch from './components/NewLaunch/newlaunch'
@@ -19,7 +23,9 @@ const styles = makeStyles((theme: Theme) =>
 );
 function App() {
   const classes = styles();
+  const theme = createTheme();
   return (
+    <ThemeProvider theme={theme}>
     <div className={classes.mainComponent}>
       <Header />
       <Banner />
@@ -30,6 +36,7 @@ function App() {
       <NewLauch/>
       <Subscribe />
     </div>
+    </ThemeProvider>
   );
 }
 
